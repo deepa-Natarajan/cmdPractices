@@ -1,0 +1,24 @@
+class StringReplace{
+public static void main (String args[]){
+String org="This is a test.This is, too!";
+String search="is";
+String sub="was";
+String result="";
+int i;
+
+do {
+System.out.println(org);
+i=org.indexOf(search);
+System.out.println("index:"+ i);
+if(i != -1){
+
+	result=org.substring(0,i);
+	result=result.concat(sub);//Another method-String concat(String str)
+	result=result + org.substring(i+search.length());
+	System.out.println(org.substring(i+search.length()));
+	org=result;
+}
+}while(i!=-1);
+
+
+}}
